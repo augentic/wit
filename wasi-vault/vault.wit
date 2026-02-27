@@ -1,3 +1,10 @@
+
+package wasi:vault@0.1.0-draft;
+
+world imports {
+    import vault;
+}
+
 interface vault {
     /// An error type that encapsulates the different errors that can occur fetching secrets
     variant error {
@@ -13,7 +20,7 @@ interface vault {
     }
 
     /// Open the specified locker.
-    /// 
+    ///
     /// `error::no-such-store` will be raised if the `identifier` is not recognized.
     open: async func(locker-id: string) -> result<locker, error>;
 
@@ -29,7 +36,7 @@ interface vault {
         set: async func(secret-id: string, value: list<u8>) -> result<_, error>;
 
         /// Delete the specified secret.
-        /// 
+        ///
         /// Will do nothing if the secret does not exist.
         delete: async func(secret-id: string) -> result<_, error>;
 
