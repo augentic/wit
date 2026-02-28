@@ -1,0 +1,12 @@
+[submodule "wasi-blobstore"]
+	path = wasi-blobstore
+	url = https://github.com/augentic/wasi-blobstore
+[submodule "wasi-keyvalue"]
+	path = wasi-keyvalue
+	url = https://github.com/augentic/wasi-keyvalue
+[submodule "wasi-messaging"]
+	path = wasi-messaging
+	url = https://github.com/augentic/wasi-messaging
+[submodule "wasi-sql"]
+	path = wasi-sql
+	url = https://github.com/augentic/wasi-sql
