@@ -7,7 +7,6 @@ Published to the GitHub Container Registry at `ghcr.io/augentic/omnia/<package>`
 
 Install [wkg](https://github.com/bytecodealliance/wasm-pkg-tools).
 
-
 ## Publishing
 
 ### Authentication
@@ -20,22 +19,14 @@ echo "$GITHUB_TOKEN" | docker login ghcr.io -u USERNAME --password-stdin
 
 ### Build and publish a package
 
-To publish the identity package to ghcr.io/augentic/omnia/identity:
+To publish the otel package to ghcr.io/augentic/omnia/otel:
 
 ```bash
 wkg wit build --config .config.toml --wit-dir ./otel
 wkg publish --config .config.toml omnia:otel@0.1.0.wasm
 ```
 
-### Download a package as WIT file
-
-To get the otel package:
-
-```bash
-wkg get --config .config.toml omnia:otel@0.1.0
-```
-
-## Fetching a Package
+## Using
 
 To fetch a package in another project, add the following to your wasm-pkg config a local `.wkg-config.toml`:
 
@@ -58,3 +49,4 @@ And fetch any dependencies:
 ```bash
 wkg wit fetch --config .config.toml --wit-dir ./otel
 ```
+
