@@ -1,5 +1,4 @@
-package wasi:identity@0.1.0-draft;
-
+package omnia:identity@0.1.0;
 
 world imports {
     import credentials;

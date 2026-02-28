@@ -1,0 +1,28 @@
+default_registry = "wasi.dev"
+
+# Namespace prefix mappings to registry (e.g. "wasi" part of "wasi:http").
+# The wasi namespace resolves to wasi.dev for fetching upstream dependencies.
+[namespace_registries]
+wasi = "wasi.dev"
+# TODO: set up well-known metadata at https://omnia.host/.well-known/wasm-pkg/registry.json
+# so that packages resolve automatically without inline metadata.
+omnia = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+
+# [package_registry_overrides]
+# "wasi:blobstore" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+# "wasi:keyvalue" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+# "wasi:messaging" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+# "wasi:sql" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+
+[registry."wasi.dev"]
+default = "oci"
+
+[registry."wasi.dev".oci]
+protocol = "https"
+
+# Auth for ghcr.io is resolved from docker config.json (via `docker login ghcr.io`).
+# Do NOT put credentials in this file.
+[registry."augentic"]
+default = "oci"
+
+[registry."augentic".oci]

@@ -1,4 +1,4 @@
-package wasi:websocket@0.1.0;
+package omnia:websocket@0.1.0;
 
 world imports {
     import types;

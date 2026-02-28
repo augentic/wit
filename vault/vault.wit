@@ -1,5 +1,5 @@
 
-package wasi:vault@0.1.0-draft;
+package omnia:vault@0.1.0;
 
 world imports {
     import vault;
