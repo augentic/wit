@@ -36,6 +36,12 @@ default_registry = "augentic"
 [namespace_registries]
 omnia = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
 wasi = "wasi.dev"
+
+[package_registry_overrides]
+"wasi:blobstore" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+"wasi:keyvalue" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+"wasi:messaging" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+"wasi:sql" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
 ```
 
 Then fetch the package:
