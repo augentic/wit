@@ -1,15 +1,15 @@
-default_registry = "augentic"
+# N.B. packages resolve automatically due to well-known metadata at 
+# https://omnia.host/.well-known/wasm-pkg/registry.json
+
+default_registry = "omnia"
 
 [namespace_registries]
-omnia = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+omnia = "omnia.host"
 wasi = "wasi.dev"
+# omnia = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
 
 [package_registry_overrides]
-"wasi:blobstore" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
-"wasi:keyvalue" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
-"wasi:messaging" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
-"wasi:sql" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
-
-# TODO: 
-#   set up well-known metadata at https://omnia.host/.well-known/wasm-pkg/registry.json
-#   so that packages resolve automatically without inline metadata.
+"wasi:blobstore" = "omnia.host"
+"wasi:keyvalue" = "omnia.host"
+"wasi:messaging" = "omnia.host"
+"wasi:sql" = "omnia.host"

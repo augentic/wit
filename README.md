@@ -34,14 +34,14 @@ To fetch a package in another project, add the following to your wasm-pkg config
 default_registry = "augentic"
 
 [namespace_registries]
-omnia = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+omnia = "omnia.host"
 wasi = "wasi.dev"
 
 [package_registry_overrides]
-"wasi:blobstore" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
-"wasi:keyvalue" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
-"wasi:messaging" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
-"wasi:sql" = { registry = "augentic", metadata = { preferredProtocol = "oci", "oci" = { registry = "ghcr.io", namespacePrefix = "augentic/" } } }
+"wasi:blobstore" = "omnia.host"
+"wasi:keyvalue" = "omnia.host"
+"wasi:messaging" = "omnia.host"
+"wasi:sql" = "omnia.host"
 ```
 
 Then fetch the package:
