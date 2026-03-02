@@ -31,7 +31,7 @@ wkg publish --config .config.toml omnia:otel@0.1.0.wasm
 To fetch a package in another project, add the following to your wasm-pkg config a local `.wkg-config.toml`:
 
 ```toml
-default_registry = "augentic"
+default_registry = "omnia.host"
 
 [namespace_registries]
 omnia = "omnia.host"

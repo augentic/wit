@@ -1,7 +1,7 @@
 # N.B. packages resolve automatically due to well-known metadata at 
 # https://omnia.host/.well-known/wasm-pkg/registry.json
 
-default_registry = "omnia"
+default_registry = "omnia.host"
 
 [namespace_registries]
 omnia = "omnia.host"
